@@ -1,0 +1,152 @@
+/* General Styles */
+:root {
+    --primary-color: #f170b1;
+    --secondary-color: #ff68e6;
+    --dark-color: #ec68e6;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Banner Section */
+.banner {
+    height: 100vh;
+    background: linear-gradient(rgba(252, 157, 223, 0.7), rgba(240, 52, 139, 0.7)), url('image/lany.jpeg') no-repeat center center/cover;
+    color: rgb(8, 8, 8);
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Services Section */
+.service-card {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card i {
+    color: var(--primary-color);
+}
+/portofolio/
+.portfolio-card,
+.portfolio-item {
+    background: rgb(223, 190, 204);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(247, 110, 178, 0.856);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover,
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-card img,
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Optional overlay style, bisa dihapus kalau mau full clean look */
+.portfolio-overlay {
+    padding: 15px;
+    background-color: #e98fc3e0;
+    text-align: center;
+}
+
+.portfolio-overlay h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 200;
+}
+
+.portfolio-overlay p {
+    font-size: 0.9rem;
+    color: #f01e87;
+    margin: 0;
+}
+
+/* Navigation */
+.navbar {
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 10px 0;
+    background: rgba(255, 107, 198, 0.9) !important;
+}
+
+.nav-link {
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Buttons */
+.btn-primary {
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(236, 93, 189, 0.945);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .banner p {
+        font-size: 1.2rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
